@@ -27,7 +27,7 @@ export default function Team() {
           aria-hidden
           width={381}
           height={373}
-          className="pointer-events-none absolute top-[-240px] left-0 hidden h-auto w-[460px] max-w-none lg:block"
+          className="pointer-events-none absolute top-[-280px] left-0 hidden h-auto w-[540px] max-w-none lg:block"
         />
 
         {/* Bintang: tepi kanan layar, di belakang pojok kartu terakhir */}
@@ -37,7 +37,7 @@ export default function Team() {
           aria-hidden
           width={311}
           height={391}
-          className="pointer-events-none absolute right-0 bottom-[-260px] hidden h-auto w-[380px] max-w-none lg:block"
+          className="pointer-events-none absolute right-0 bottom-[-300px] hidden h-auto w-[450px] max-w-none lg:block"
         />
 
         <div className="relative z-10 mx-auto max-w-[1144px] px-5 md:px-8">
