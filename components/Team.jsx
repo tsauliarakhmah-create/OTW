@@ -19,24 +19,24 @@ export default function Team() {
 
         {/* Pembungkus grid: gear dan bintang dipasang relatif ke sini */}
         <div className="relative mt-24">
-          {/* Gear: di kiri kartu pertama, naik di atasnya, masuk sedikit ke belakang kartu */}
+          {/* Gear: naik di atas kartu pertama, masuk ke belakang kartu */}
           <Image
             src="/images/gear.png"
             alt=""
             aria-hidden
             width={381}
             height={373}
-            className="pointer-events-none absolute top-[-102px] right-full hidden h-auto w-[381px] max-w-none translate-x-5 lg:block"
+            className="pointer-events-none absolute top-[-203px] right-full hidden h-auto w-[381px] max-w-none translate-x-[130px] lg:block"
           />
 
-          {/* Bintang: di kanan bawah, masuk ke belakang pojok kartu terakhir */}
+          {/* Bintang: masuk ke belakang pojok kanan bawah kartu terakhir */}
           <Image
             src="/images/burst-2.png"
             alt=""
             aria-hidden
             width={311}
             height={391}
-            className="pointer-events-none absolute bottom-[-165px] left-full hidden h-auto w-[311px] max-w-none -translate-x-[66px] lg:block"
+            className="pointer-events-none absolute bottom-[-213px] left-full hidden h-auto w-[311px] max-w-none -translate-x-[142px] lg:block"
           />
 
           <div className="grid grid-cols-2 gap-x-4 gap-y-24 md:gap-x-10 lg:grid-cols-3 lg:gap-x-[117px] lg:gap-y-[85px]">
