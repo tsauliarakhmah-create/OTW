@@ -14,33 +14,36 @@ const members = [
 export default function Team() {
   return (
     <section id="team" className="relative px-5 py-16 md:px-8 md:py-24">
-      {/* Roda gigi: kiri atas, sebagian keluar dari tepi layar */}
-      <Image
-        src="/images/gear.png"
-        alt=""
-        aria-hidden
-        width={381}
-        height={373}
-        className="pointer-events-none absolute top-[190px] -left-[110px] hidden h-auto w-[220px] max-w-none md:block lg:w-[381px]"
-      />
-
-      {/* Bintang oranye: kanan bawah, di belakang kartu terakhir */}
-      <Image
-        src="/images/burst-2.png"
-        alt=""
-        aria-hidden
-        width={311}
-        height={391}
-        className="pointer-events-none absolute -right-[60px] -bottom-[70px] hidden h-auto w-[200px] max-w-none md:block lg:w-[311px]"
-      />
-
       <div className="relative z-10 mx-auto max-w-[1080px]">
         <SectionTitle>Our Team</SectionTitle>
 
-        <div className="mt-24 grid grid-cols-2 gap-x-4 gap-y-24 md:gap-x-10 lg:grid-cols-3 lg:gap-x-[117px] lg:gap-y-[85px]">
-          {members.map((member) => (
-            <TeamCard key={member.name} {...member} />
-          ))}
+        {/* Pembungkus grid: gear dan bintang dipasang relatif ke sini */}
+        <div className="relative mt-24">
+          {/* Gear: di kiri kartu pertama, naik di atasnya, masuk sedikit ke belakang kartu */}
+          <Image
+            src="/images/gear.png"
+            alt=""
+            aria-hidden
+            width={381}
+            height={373}
+            className="pointer-events-none absolute top-[-102px] right-full hidden h-auto w-[381px] max-w-none translate-x-5 lg:block"
+          />
+
+          {/* Bintang: di kanan bawah, masuk ke belakang pojok kartu terakhir */}
+          <Image
+            src="/images/burst-2.png"
+            alt=""
+            aria-hidden
+            width={311}
+            height={391}
+            className="pointer-events-none absolute bottom-[-165px] left-full hidden h-auto w-[311px] max-w-none -translate-x-[66px] lg:block"
+          />
+
+          <div className="grid grid-cols-2 gap-x-4 gap-y-24 md:gap-x-10 lg:grid-cols-3 lg:gap-x-[117px] lg:gap-y-[85px]">
+            {members.map((member) => (
+              <TeamCard key={member.name} {...member} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
