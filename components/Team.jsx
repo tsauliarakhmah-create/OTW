@@ -14,31 +14,33 @@ const members = [
 export default function Team() {
   return (
     <section id="team" className="relative px-5 py-16 md:px-8 md:py-24">
-      <div className="relative z-10 mx-auto max-w-[1080px]">
+      <div className="mx-auto max-w-[1080px]">
         <SectionTitle>Our Team</SectionTitle>
+      </div>
 
-        {/* Pembungkus grid: gear dan bintang dipasang relatif ke sini */}
-        <div className="relative mt-24">
-          {/* Gear: naik di atas kartu pertama, masuk ke belakang kartu */}
-          <Image
-            src="/images/gear.png"
-            alt=""
-            aria-hidden
-            width={381}
-            height={373}
-            className="pointer-events-none absolute top-[-203px] right-full hidden h-auto w-[381px] max-w-none translate-x-[130px] lg:block"
-          />
+      {/* Pembungkus selebar layar: gear dan bintang menempel ke tepi layar */}
+      <div className="relative -mx-5 mt-24 md:-mx-8">
+        {/* Gear: tepi kiri layar, naik di atas kartu pertama */}
+        <Image
+          src="/images/gear.png"
+          alt=""
+          aria-hidden
+          width={381}
+          height={373}
+          className="pointer-events-none absolute top-[-203px] left-0 hidden h-auto w-[381px] max-w-none lg:block"
+        />
 
-          {/* Bintang: masuk ke belakang pojok kanan bawah kartu terakhir */}
-          <Image
-            src="/images/burst-2.png"
-            alt=""
-            aria-hidden
-            width={311}
-            height={391}
-            className="pointer-events-none absolute bottom-[-213px] left-full hidden h-auto w-[311px] max-w-none -translate-x-[142px] lg:block"
-          />
+        {/* Bintang: tepi kanan layar, di belakang pojok kartu terakhir */}
+        <Image
+          src="/images/burst-2.png"
+          alt=""
+          aria-hidden
+          width={311}
+          height={391}
+          className="pointer-events-none absolute right-0 bottom-[-213px] hidden h-auto w-[311px] max-w-none lg:block"
+        />
 
+        <div className="relative z-10 mx-auto max-w-[1144px] px-5 md:px-8">
           <div className="grid grid-cols-2 gap-x-4 gap-y-24 md:gap-x-10 lg:grid-cols-3 lg:gap-x-[117px] lg:gap-y-[85px]">
             {members.map((member) => (
               <TeamCard key={member.name} {...member} />
