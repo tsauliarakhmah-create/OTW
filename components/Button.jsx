@@ -1,5 +1,5 @@
 const variants = {
-  main: "h-9 w-[140px] text-base font-medium",
+  main: "h-[62px] w-[169px] text-2xl font-medium",
   details: "h-11 gap-3 px-4 text-base font-semibold tracking-normal",
 };
 
